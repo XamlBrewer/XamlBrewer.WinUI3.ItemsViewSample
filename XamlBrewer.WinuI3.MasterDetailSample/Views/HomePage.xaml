@@ -74,55 +74,60 @@
                               IsEnabled="{x:Bind ViewModel.HasCurrent, Mode=OneWay}" />
             </CommandBar>
         </Grid>
-        <ListView x:Name="CharacterListView"
-                  ItemsSource="{x:Bind ViewModel.Items, Mode=OneWay}"
-                  SelectedItem="{x:Bind ViewModel.Current, Mode=TwoWay}"
-                  Grid.Row="1">
-            <ListView.ItemTemplate>
+        <ItemsView x:Name="CharacterListView"
+                   ItemsSource="{x:Bind ViewModel.Items, Mode=OneWay}"
+                   SelectionChanged="CharacterListView_SelectionChanged"
+                   IsItemInvokedEnabled="True"
+                   ItemInvoked="CharacterListView_ItemInvoked"
+                   Grid.Row="1">
+            <ItemsView.ItemTemplate>
                 <DataTemplate x:DataType="models:Character">
-                    <UserControl PointerEntered="ListViewItem_PointerEntered"
-                                 PointerExited="ListViewItem_PointerExited">
-                        <RelativePanel Background="Transparent">
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="HoveringStates">
-                                    <VisualState x:Name="HoverButtonsHidden" />
-                                    <VisualState x:Name="HoverButtonsShown">
-                                        <VisualState.Setters>
-                                            <Setter Target="HoverButtons.Visibility"
-                                                    Value="Visible" />
-                                        </VisualState.Setters>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <TextBlock RelativePanel.AlignLeftWithPanel="True"
-                                       RelativePanel.AlignVerticalCenterWithPanel="True"
-                                       Margin="0 8">
+                    <ItemContainer>
+                        <UserControl PointerEntered="ListViewItem_PointerEntered"
+                                     PointerExited="ListViewItem_PointerExited">
+                            <RelativePanel Background="Transparent"
+                                           Padding="8 4 4 4">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="HoveringStates">
+                                        <VisualState x:Name="HoverButtonsHidden" />
+                                        <VisualState x:Name="HoverButtonsShown">
+                                            <VisualState.Setters>
+                                                <Setter Target="HoverButtons.Visibility"
+                                                        Value="Visible" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <TextBlock RelativePanel.AlignLeftWithPanel="True"
+                                           RelativePanel.AlignVerticalCenterWithPanel="True"
+                                           Margin="0 8">
                                 <Run Text="{x:Bind Name, Mode=OneWay}"
                                      FontWeight="SemiBold" />
                                 <LineBreak />
                                 <Run Text="{x:Bind Kind, Mode=OneWay}" />
-                            </TextBlock>
-                            <StackPanel x:Name="HoverButtons"
-                                        Orientation="Horizontal"
-                                        Visibility="Collapsed"
-                                        RelativePanel.AlignRightWithPanel="True"
-                                        RelativePanel.AlignVerticalCenterWithPanel="True">
-                                <AppBarButton IsCompact="True"
-                                              HorizontalAlignment="Right"
-                                              Command="{StaticResource DuplicateCommand}"
-                                              CommandParameter="{x:Bind Name}"
-                                              Width="32" />
-                                <AppBarButton IsCompact="True"
-                                              HorizontalAlignment="Right"
-                                              Command="{StaticResource DeleteCommand}"
-                                              CommandParameter="{x:Bind Name}"
-                                              Width="32" />
-                            </StackPanel>
-                        </RelativePanel>
-                    </UserControl>
+                                </TextBlock>
+                                <StackPanel x:Name="HoverButtons"
+                                            Orientation="Horizontal"
+                                            Visibility="Collapsed"
+                                            RelativePanel.AlignRightWithPanel="True"
+                                            RelativePanel.AlignVerticalCenterWithPanel="True">
+                                    <AppBarButton IsCompact="True"
+                                                  HorizontalAlignment="Right"
+                                                  Command="{StaticResource DuplicateCommand}"
+                                                  CommandParameter="{x:Bind Name}"
+                                                  Width="32" />
+                                    <AppBarButton IsCompact="True"
+                                                  HorizontalAlignment="Right"
+                                                  Command="{StaticResource DeleteCommand}"
+                                                  CommandParameter="{x:Bind Name}"
+                                                  Width="32" />
+                                </StackPanel>
+                            </RelativePanel>
+                        </UserControl>
+                    </ItemContainer>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </ItemsView.ItemTemplate>
+        </ItemsView>
         <Grid Visibility="{x:Bind ViewModel.HasCurrent, Mode=OneWay}"
               Margin="20"
               Grid.Column="1"

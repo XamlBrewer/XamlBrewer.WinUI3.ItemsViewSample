@@ -44,8 +44,15 @@ namespace XamlBrewer.WinUI3.MasterDetailSample.Views
         {
             if (e.PropertyName == "Current" && ViewModel.HasCurrent)
             {
-                CharacterListView.ScrollIntoView(ViewModel.Current);
+                var index = ViewModel.Items.IndexOf(ViewModel.Current);
+                CharacterListView.Select(index);
+                CharacterListView.StartBringItemIntoView(index, new BringIntoViewOptions { });
             }
+        }
+
+        private void CharacterListView_SelectionChanged(ItemsView sender, ItemsViewSelectionChangedEventArgs args)
+        {
+            ViewModel.Current = sender.SelectedItem as Character;
         }
 
         private void ListViewItem_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -109,6 +116,11 @@ namespace XamlBrewer.WinUI3.MasterDetailSample.Views
             {
                 ViewModel.Current = character;
             }
+        }
+
+        private void CharacterListView_ItemInvoked(ItemsView sender, ItemsViewItemInvokedEventArgs args)
+        {
+            // ???
         }
     }
 }
