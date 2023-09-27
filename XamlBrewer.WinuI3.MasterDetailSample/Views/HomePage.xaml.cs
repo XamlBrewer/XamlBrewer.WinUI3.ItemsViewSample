@@ -120,7 +120,7 @@ namespace XamlBrewer.WinUI3.MasterDetailSample.Views
 
         private void CharacterListView_ItemInvoked(ItemsView sender, ItemsViewItemInvokedEventArgs args)
         {
-            // ???
+           EditCommand.Execute(null);
         }
     }
 }
