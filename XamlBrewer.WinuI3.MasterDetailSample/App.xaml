@@ -39,6 +39,15 @@
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
+            <!-- Custom Accent Colors -->
+            <Color x:Key="SystemAccentColorDark3">#304f50</Color>
+            <Color x:Key="SystemAccentColorDark2">#395e60</Color>
+            <Color x:Key="SystemAccentColorDark1">#4d7e80</Color>
+            <Color x:Key="SystemAccentColor">#5f9ea0</Color>
+            <Color x:Key="SystemAccentColorLight1">#80b1b3</Color>
+            <Color x:Key="SystemAccentColorLight2">#9fc4c6</Color>
+            <Color x:Key="SystemAccentColorLight3">#bfd8d9</Color>
+            <Color x:Key="SystemAccentColorComplementary">#a02d64</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

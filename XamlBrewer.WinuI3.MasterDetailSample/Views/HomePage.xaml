@@ -39,6 +39,8 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        
+        <!-- Tool Bar -->
         <Grid HorizontalAlignment="Stretch"
               Background="{StaticResource SystemAccentColorBrush}"
               Margin="0 0 0 16"
@@ -74,6 +76,8 @@
                               IsEnabled="{x:Bind ViewModel.HasCurrent, Mode=OneWay}" />
             </CommandBar>
         </Grid>
+        
+        <!-- List -->
         <ItemsView x:Name="CharacterListView"
                    ItemsSource="{x:Bind ViewModel.Items, Mode=OneWay}"
                    SelectionChanged="CharacterListView_SelectionChanged"
@@ -128,6 +132,8 @@
                 </DataTemplate>
             </ItemsView.ItemTemplate>
         </ItemsView>
+        
+        <!-- Details -->
         <Grid Visibility="{x:Bind ViewModel.HasCurrent, Mode=OneWay}"
               Margin="20"
               Grid.Column="1"
@@ -156,8 +162,9 @@
                        TextWrapping="Wrap"
                        Margin="100 0"
                        Grid.Row="1" />
-
         </Grid>
+        
+        <!-- Edit Dialog -->
         <ContentDialog x:Name="EditDialog"
                        PrimaryButtonText="Update"
                        CloseButtonText="Cancel"

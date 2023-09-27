@@ -8,15 +8,17 @@
 
     <Grid>
         <TextBlock>
-            <Run>This WinUI 3 Desktop app illustrates migrating from ListView to ItemsView. As a port from our MasterDetail sample, it demonstrates</Run>
+            <Run Text="This WinUI 3 Desktop app illustrates migrating from ListView to ItemsView. As a port from our " /><Hyperlink NavigateUri="https://github.com/XamlBrewer/XamlBrewer.WinUI3.MasterDetailSample">MasterDetail sample</Hyperlink><Run Text=", it demonstrates" />
             <LineBreak />
-            <Run>* ,</Run>
+            <Run>* replacing ListView by ItemsView,</Run>
             <LineBreak />
-            <Run>* ...,</Run>
+            <Run>* selection management,</Run>
             <LineBreak />
-            <Run>* ..., and</Run>
+            <Run>* templating, </Run>
             <LineBreak />
-            <Run>* ...</Run>
+            <Run>* auto-scrolling, and</Run>
+            <LineBreak />
+            <Run>* invoking an item.</Run>
             <LineBreak /><LineBreak />    
             <LineBreak /><LineBreak />  
             <Run Text="Text and images from " /><Hyperlink NavigateUri="https://starwars.fandom.com/">Wookieepedia.</Hyperlink>
