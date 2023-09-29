@@ -75,6 +75,41 @@ namespace XamlBrewer.WinUI3.MasterDetailSample.Models
                 Kind = "Human",
                 Description = "Boba Fett was a human male bounty hunter and crime lord of Tatooine whose career spanned decades, from the fall of the Galactic Republic to the end of the rule of the Galactic Empire, culminating in his ascension to the Daimyo of Tatooine during the era of the New Republic. Originally code-named Alpha, he was an unaltered clone of the famed Mandalorian bounty hunter Jango Fett.",
                 ImagePath = "/Assets/BobaFett.png"
+            },
+            new Character
+            {
+                Name = "Ahsoka Tano",
+                Kind = "Alien",
+                Description = "Ahsoka Tano, a Togruta female, was a Force-sensitive outcast from the Jedi Order who, after the Clone Wars, helped establish a network of various rebel cells against the Galactic Empire.",
+                ImagePath = "/Assets/AhsokaTano.png"
+            },
+            new Character
+            {
+                Name = "Morgan Elsbeth",
+                Kind = "Human",
+                Description = "Morgan Elsbeth was a human female Nightsister who was instrumental in the construction of the Imperial Navy during the reign of the Galactic Empire. By the era of the New Republic, she led a ruthless regime and served as magistrate of Calodan on the planet Corvus. Elsbeth was in possession of a spear made of pure beskar, and offered it as payment to the Mandalorian bounty hunter Din Djarin for him to kill the former Jedi Ahsoka Tano.",
+                ImagePath = "/Assets/MorganElsbeth.png"
+            },
+            new Character
+            {
+                Name = "Huyang",
+                Kind = "Droid",
+                Description = "Huyang was a Mark IV architect droid professor based aboard the Jedi vessel Crucible who, for a thousand generations, taught Jedi younglings, including Grand Master Yoda and Jedi Master Mace Windu, how to construct their lightsabers following the Gathering. Huyang also told the younglings stories and would teach \"History of the Galaxy, Parts One, Two, and Three\".",
+                ImagePath = "/Assets/Huyang.png"
+            },
+            new Character
+            {
+                Name = "Hera Syndulla",
+                Kind = "Alien",
+                Description = "Hera Syndulla was a Twi'lek female revolutionary leader who became a central figure in the early rebellion against the Galactic Empire and the formation of the Alliance to Restore the Republic.",
+                ImagePath = "/Assets/HeraSyndulla.png"
+            },
+            new Character
+            {
+                Name = "Sabine Wren",
+                Kind = "Human",
+                Description = "Sabine Wren was a human female Mandalorian warrior and revolutionary leader during the Galactic Civil War against the Galactic Empire. Her artistry during the rebellion inspired the symbol of the Alliance to Restore the Republic, and her claim over the ancient Mandalorian weapon known as the Darksaber made her a primary symbol to Clan Wren and the hopes of freeing her people's homeworld of Mandalore from the rule of the Empire.",
+                ImagePath = "/Assets/SabineWren.png"
             }
         };
 
