@@ -39,7 +39,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <!-- Tool Bar -->
         <Grid HorizontalAlignment="Stretch"
               Background="{StaticResource SystemAccentColorBrush}"
@@ -76,7 +76,7 @@
                               IsEnabled="{x:Bind ViewModel.HasCurrent, Mode=OneWay}" />
             </CommandBar>
         </Grid>
-        
+
         <!-- List -->
         <ItemsView x:Name="CharacterListView"
                    ItemsSource="{x:Bind ViewModel.Items, Mode=OneWay}"
@@ -132,7 +132,7 @@
                 </DataTemplate>
             </ItemsView.ItemTemplate>
         </ItemsView>
-        
+
         <!-- Details -->
         <Grid Visibility="{x:Bind ViewModel.HasCurrent, Mode=OneWay}"
               Margin="20"
@@ -163,12 +163,11 @@
                        Margin="100 0"
                        Grid.Row="1" />
         </Grid>
-        
+
         <!-- Edit Dialog -->
         <ContentDialog x:Name="EditDialog"
                        PrimaryButtonText="Update"
-                       CloseButtonText="Cancel"
-                       Background="{ThemeResource SystemAccentColor}">
+                       CloseButtonText="Cancel">
             <RelativePanel HorizontalAlignment="Stretch">
                 <TextBox x:Name="Name"
                          Header="Name"

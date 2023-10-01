@@ -8,20 +8,6 @@
           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
           VerticalAlignment="Stretch"
           HorizontalAlignment="Stretch">
-        <!--<Grid.Resources>
-            <AcrylicBrush x:Key="NavigationViewExpandedPaneBackground"
-                          TintColor="{StaticResource SystemChromeMediumLowColor}"
-                          TintOpacity="0"
-                          TintLuminosityOpacity="0"
-                          FallbackColor="{StaticResource SystemChromeMediumLowColor}" />
-        </Grid.Resources>-->
-
-        <!-- Background -->
-        <Image Stretch="UniformToFill"
-               Opacity="{ThemeResource BackgroundOpacity}"
-               Source="/Assets/Background.jpg"
-               HorizontalAlignment="Left"
-               VerticalAlignment="Center" />
 
         <!-- Main Beef -->
         <NavigationView x:Name="NavigationView"

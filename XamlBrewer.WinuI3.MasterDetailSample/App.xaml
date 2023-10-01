@@ -7,14 +7,12 @@
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="HighContrast">
-                    <x:Double x:Key="BackgroundOpacity">0</x:Double>
                     <SolidColorBrush x:Key="TenPercentContrastBrush"
                                      Color="{ThemeResource SystemColorWindowTextColor}" />
                     <SolidColorBrush x:Key="SystemAccentColorBrush"
                                      Color="{StaticResource SystemAccentColor}" />
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
-                    <x:Double x:Key="BackgroundOpacity">.075</x:Double>
                     <SolidColorBrush x:Key="TenPercentContrastBrush"
                                      Color="White"
                                      Opacity=".1" />
@@ -24,7 +22,6 @@
                                      Opacity=".4" />
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Light">
-                    <x:Double x:Key="BackgroundOpacity">.1</x:Double>
                     <SolidColorBrush x:Key="TenPercentContrastBrush"
                                      Color="Black"
                                      Opacity=".1" />
