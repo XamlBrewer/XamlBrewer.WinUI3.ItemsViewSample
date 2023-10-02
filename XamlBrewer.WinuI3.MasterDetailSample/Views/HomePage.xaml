@@ -167,6 +167,7 @@
         <!-- Edit Dialog -->
         <ContentDialog x:Name="EditDialog"
                        PrimaryButtonText="Update"
+                       Foreground="{ThemeResource SystemAccentColor}"
                        CloseButtonText="Cancel">
             <RelativePanel HorizontalAlignment="Stretch">
                 <TextBox x:Name="Name"
