@@ -45,10 +45,16 @@ namespace XamlBrewer.WinUI3.MasterDetailSample.Views
             if (e.PropertyName == "Current" && ViewModel.HasCurrent)
             {
                 var index = ViewModel.Items.IndexOf(ViewModel.Current);
-                // Fishy
-                CharacterListView.Select(index); // To ensure BringItemIntoView works.
-                CharacterListView.StartBringItemIntoView(index, new BringIntoViewOptions { }); 
-                CharacterListView.Select(index); // To visually select the item.
+
+                CharacterListView.Select(index);
+                if (index == ViewModel.Items.Count - 1)
+                {
+                    CharacterListView.StartBringItemIntoView(index, new BringIntoViewOptions { VerticalAlignmentRatio = 1f });
+                }
+                else
+                {
+                    CharacterListView.StartBringItemIntoView(index, new BringIntoViewOptions { });
+                }
             }
         }
 
